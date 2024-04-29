@@ -1,0 +1,55 @@
+---
+import Layout from "./Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import ButtonOpenAside from "../components/ButtonOpenAside.astro";
+import Aside from "../components/Aside.astro";
+import { DownrowIcon } from "../util/icons.jsx";
+---
+
+<Layout title="LF | Portfolio">
+  <Navbar />
+  <header
+    class="w-full h-screen flex flex-col justify-center items-center text-white gap-7 relative"
+  >
+    <h1 class="text-7xl">Welcome to my portfolio!</h1>
+    <p class="text-3xl">Scroll for see more</p>
+    <div
+      class="downRowIcon absolute left-50 -translate-x-50 bottom-0 m-12 text-2xl"
+    >
+      <DownrowIcon />
+    </div>
+  </header>
+  <main class="rounded-2xl p-10 mt-24 h-max flex flex-col gap-10">
+    <slot />
+  </main>
+  <Aside />
+  <ButtonOpenAside />
+  <style>
+    main {
+      width: 55%;
+      background-color: rgba(75, 75, 75, 0.063);
+      border: 1px solid rgb(190, 190, 190);
+    }
+    .downRowIcon {
+      animation: infinite bungle 1s 2s;
+    }
+
+    @keyframes bungle {
+      0% {
+        transform: translateY(0px);
+      }
+      25% {
+        transform: translateY(10px);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+      75% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+  </style>
+</Layout>

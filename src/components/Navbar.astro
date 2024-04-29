@@ -1,0 +1,110 @@
+---
+import NavbarReact from "./Navbar.jsx";
+import {
+  CapivaraIcon,
+  PhantomIcon,
+  GraduateHatIcon,
+  FolderIcon,
+} from "../util/icons.jsx";
+---
+
+<script>
+  document.querySelectorAll("li").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      if (item.id) {
+        const section = document.querySelector(`#section_${item.id}`);
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+</script>
+
+<div class="fixed h-24 flex justify-center w-full z-20">
+  <nav class="w-full h-full flex px-10 justify-between shadow shadow-slate-200">
+    <div class="flex items-center text-3xl">
+      <CapivaraIcon />
+    </div>
+    <ul class="h-full w-3/5 flex items-center justify-around text-white py-5">
+      <!-- <NavbarReact arraySectionsId={arraySectionsId} handleView={handleViewSections}/> -->
+      <li class="relative h-max aside-element navbarElement" id="knowme">
+        <div>
+          <PhantomIcon />
+        </div>
+        <div
+          class="absolute bg-slate-900 rounded text-white w-max px-2 py-1 hoverBoard"
+        >
+          <p>Know Me!</p>
+        </div>
+      </li>
+      <li class="relative h-max aside-element navbarElement" id="habilities">
+        <button class="bg-transparent h-full w-full">
+          <div>
+            <GraduateHatIcon />
+          </div>
+          <div
+            class="absolute bg-slate-900 rounded text-white w-max px-2 py-1 hoverBoard"
+          >
+            <p>My knowledge</p>
+          </div>
+        </button>
+      </li>
+      <li class="relative h-max aside-element navbarElement">
+        <a href="/projects" class="absolute h-full w-full bg-transparent"></a>
+        <button class="bg-transparent h-full w-full">
+          <div>
+            <FolderIcon />
+          </div>
+          <div
+            class="absolute bg-slate-900 rounded text-white w-max px-2 py-1 hoverBoard"
+          >
+            <p>My projects</p>
+          </div>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<style>
+  nav {
+    background: rgba(0, 0, 0, 0.515);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    animation: bouncy 0.7s ease-in-out;
+  }
+
+  @keyframes bouncy {
+    0% {
+      transform: translateY(-100px);
+    }
+    33% {
+      transform: translateY(10px);
+    }
+    66% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(10);
+    }
+  }
+  .hoverBoard {
+    opacity: 0;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0.5rem 0 0 0;
+  }
+
+  .aside-element {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .aside-element:hover {
+    scale: 1.1;
+  }
+
+  .aside-element:hover .hoverBoard {
+    display: block;
+    opacity: 1;
+  }
+</style>

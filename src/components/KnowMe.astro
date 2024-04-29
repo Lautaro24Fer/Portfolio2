@@ -1,0 +1,65 @@
+---
+
+---
+
+<section
+  class="firstSection flex flex-col text-white px-1 gap-10"
+  id="section_knowme"
+>
+  <h2 class="text-4xl">Who am I?</h2>
+  <p class="text-lg flex">
+    Hello! my name is Lautaro Fernandez, i'm 21 and I am full-stack developer. I
+    currently studying at UTN FRSN in Argentina, pursuing a degree in Superior
+    Technician in Programming. For the past 3 years, I have been dedicated to
+    creating web applications, and constantly seeking new knowledge and a place
+    to apply it😀
+  </p>
+  <p class="text-lg">
+    Since I was born, I've been very close to a computer, a cell phone, or a
+    video game console. Computing quickly became something very important and
+    fascinating in my life, and the desire to learn how things work has never
+    ended for me. Since I started high school, I've been studying computer
+    science, graduated, and I am constantly developing myself as a professional
+    to give my best wherever I may be👾
+  </p>
+</section>
+
+<style>
+  .knowMe-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .knowMe-section .firstSection {
+    border-right: 1px solid white;
+    overflow-y: auto;
+    height: 85vh;
+  }
+  .knowMe-section .secondSection {
+    grid-column: 2/3;
+  }
+  .span-button {
+    position: absolute;
+    opacity: 0;
+    top: -100%;
+  }
+
+  .anchore-button {
+    width: 4rem;
+    transition: width 0.1s ease;
+  }
+
+  .anchore-button:hover {
+    width: 20rem;
+    transition: width 0.3s ease-in-out;
+    border-radius: 10rem;
+    border: 1px solid white;
+  }
+
+  .anchore-button:hover .span-button {
+    display: block;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+    transition-delay: 0.2s;
+  }
+</style>

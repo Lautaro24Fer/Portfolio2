@@ -1,0 +1,23 @@
+---
+import KnowMe from "../components/KnowMe.astro";
+import Formation from "../components/Formation.astro";
+import Aside from "../components/Aside.astro";
+import Habilities from "../components/Habilities.astro";
+import Principal from "../layouts/Principal.astro";
+import ProjectsContainer from "../components/ProjectsContainer.astro";
+---
+
+<Principal>
+  <KnowMe />
+  <Habilities />
+  <ProjectsContainer />
+  <Formation />
+</Principal>
+
+<style>
+  main {
+    width: 55%;
+    background-color: rgba(75, 75, 75, 0.063);
+    border: 1px solid rgb(190, 190, 190);
+  }
+</style>

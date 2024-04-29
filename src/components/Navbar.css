@@ -1,0 +1,20 @@
+.hoverBoard {
+    opacity: 0;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: .5rem 0 0 0;
+  }
+
+  .aside-element {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .aside-element:hover {
+    scale: 1.1;
+  }
+
+  .aside-element:hover .hoverBoard {
+    display: block;
+    opacity: 1;
+  }
