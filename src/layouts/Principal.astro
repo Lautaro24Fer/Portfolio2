@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import ButtonOpenAside from "../components/ButtonOpenAside.astro";
 import Aside from "../components/Aside.astro";
 import { DownrowIcon } from "../util/icons.jsx";
+import CommentBox from "../components/CommentBox.astro";
 ---
 
 <Layout title="LF | Portfolio">
@@ -15,8 +16,19 @@ import { DownrowIcon } from "../util/icons.jsx";
     <p class="text-3xl">Scroll for see more</p>
     <div
       class="downRowIcon absolute left-50 -translate-x-50 bottom-0 m-12 text-2xl"
+      id="section_knowme"
     >
       <DownrowIcon />
+    </div>
+    <div
+      class="absolute bottom-0 left-0 m-32 mb-28"
+      style={{ transform: "rotate(-30deg)" }}
+    >
+      <CommentBox
+        text="Thank you for reviewing my work!🤗"
+        orientation=""
+        arrow="false"
+      />
     </div>
   </header>
   <main class="rounded-2xl p-10 mt-24 h-max flex flex-col gap-10">

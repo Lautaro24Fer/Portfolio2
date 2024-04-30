@@ -1,5 +1,5 @@
 ---
-
+import CommentBox from "./CommentBox.astro";
 ---
 
 <section class="main-section text-white h-full">
@@ -20,7 +20,17 @@
           style={{ border: "3px solid white" }}
         >
         </div>
-        <div class="text-wrap w-full flex flex-col">
+        <div class="text-wrap w-full flex flex-col relative">
+          <div
+            class="absolute top-0 left-0 w-max p-3"
+            style={{ marginLeft: "-18rem" }}
+          >
+            <CommentBox
+              text="This year, I completed a vocational training course in my city and graduated as a 'Computer Systems Repairer and Installer', where I repaired hardware and repaired/installed various software"
+              orientation="right"
+              arrow=""
+            />
+          </div>
           <h3 class="font-bold text-lg">
             Secondary School - "Private Institute Fray Luis Beltrán" | 2015 -
             2021

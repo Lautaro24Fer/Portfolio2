@@ -1,15 +1,21 @@
 ---
 interface Props {
   text: string;
+  orientation: string;
+  arrow: string;
 }
 
 import { ArrowDrawIcon } from "../util/icons";
-const { text } = Astro.props;
+const { text, orientation, arrow } = Astro.props;
 ---
 
-<div class="box-comments absolute">
-  <ArrowDrawIcon />
-  <p>{text}</p>
+<div
+  class={`box-comments absolute  ${orientation === "right" ? "flex-row-reverse text-right" : "flex text-left"}`}
+>
+  <div class={`${orientation === "right" ? "rotate-180" : ""}`}>
+    {arrow === "false" ? null : <ArrowDrawIcon />}
+  </div>
+  <p class="w-3/4">{text}</p>
 </div>
 
 <style>

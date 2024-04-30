@@ -1,19 +1,20 @@
 ---
 import CommentBox from "./CommentBox.astro";
+import CarouselProjects from "./CarouselProjects.astro";
 ---
 
 <section class="container-projects text-white relative w-full">
   <div class="commentBoxContainer">
-    <CommentBox text="Press here to see all my work" />
+    <CommentBox text="Press here to see all my work" orientation="left" />
   </div>
   <div class="flex justify-between items-center">
     <h2 class="text-3xl">My recent work</h2>
     <a href="/projects" class="text-blue-500 font-bold">All proyects</a>
   </div>
   <div
-    class="h-80 w-full text-white p-8 flex justify-center items-center bgLastProyect rounded-lg mt-5"
+    class="h-80 w-full flex justify-center items-center bgLastProyect rounded-lg mt-5"
   >
-    <div
+    <!-- <div
       class="flex justify-center items-center rounded-lg p-5 h-full w-max shadow-md shadow-slate-800 bgLastProyectImgContainer"
       style={{ backgroundColor: "rgb(16, 16, 16)" }}
     >
@@ -21,8 +22,9 @@ import CommentBox from "./CommentBox.astro";
         src="/x-miniatura-compr.png"
         alt="last project released"
         class="h-full lastProyectImg"
-      />
-    </div>
+      /> -->
+    <CarouselProjects />
+    <div id="section_habilities"></div>
   </div>
 </section>
 
@@ -43,7 +45,6 @@ import CommentBox from "./CommentBox.astro";
       rgba(186, 143, 59, 1) 51%,
       rgba(136, 195, 184, 1) 100%
     );
-    cursor: pointer;
   }
 
   .bgLastProyectImgContainer {
