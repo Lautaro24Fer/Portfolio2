@@ -4,25 +4,20 @@ import CarouselProjects from "./CarouselProjects.astro";
 ---
 
 <section class="container-projects text-white relative w-full">
-  <div class="commentBoxContainer">
-    <CommentBox text="Press here to see all my work" orientation="left" />
+  <div class="commentBoxContainer w-6">
+    <CommentBox
+      text="Press here to see all my work"
+      orientation="left"
+      arrow=""
+    />
   </div>
   <div class="flex justify-between items-center">
     <h2 class="text-3xl">My recent work</h2>
     <a href="/projects" class="text-blue-500 font-bold">All proyects</a>
   </div>
   <div
-    class="h-80 w-full flex justify-center items-center bgLastProyect rounded-lg mt-5"
+    class="h-80 w-full flex justify-center items-center bgLastProyect rounded-lg mt-5 relative"
   >
-    <!-- <div
-      class="flex justify-center items-center rounded-lg p-5 h-full w-max shadow-md shadow-slate-800 bgLastProyectImgContainer"
-      style={{ backgroundColor: "rgb(16, 16, 16)" }}
-    >
-      <img
-        src="/x-miniatura-compr.png"
-        alt="last project released"
-        class="h-full lastProyectImg"
-      /> -->
     <CarouselProjects />
     <div id="section_habilities"></div>
   </div>

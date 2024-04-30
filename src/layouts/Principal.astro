@@ -12,7 +12,7 @@ import CommentBox from "../components/CommentBox.astro";
   <header
     class="w-full h-screen flex flex-col justify-center items-center text-white gap-7 relative"
   >
-    <h1 class="text-7xl">Welcome to my portfolio!</h1>
+    <h1 class="text-6xl text-center">Welcome to my portfolio!</h1>
     <p class="text-3xl">Scroll for see more</p>
     <div
       class="downRowIcon absolute left-50 -translate-x-50 bottom-0 m-12 text-2xl"
@@ -21,7 +21,7 @@ import CommentBox from "../components/CommentBox.astro";
       <DownrowIcon />
     </div>
     <div
-      class="absolute bottom-0 left-0 m-32 mb-28"
+      class="absolute bottom-0 left-0 m-32 mb-28 containerCommentBox"
       style={{ transform: "rotate(-30deg)" }}
     >
       <CommentBox
@@ -61,6 +61,22 @@ import CommentBox from "../components/CommentBox.astro";
       }
       100% {
         transform: translateY(0px);
+      }
+    }
+    @media (max-width: 880px) {
+      main {
+        width: 85%;
+      }
+    }
+    @media (max-width: 330px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1.25rem;
+      }
+      header .containerCommentBox{
+        margin: 0 0 4rem 2rem
       }
     }
   </style>

@@ -7,6 +7,12 @@
     animation-range: entry 20% cover 30%;
 }
 
+.tecElement{
+    width: 10rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
 @keyframes loadingProgress {
     from{
         clip-path: inset(0 100% 0 0);
@@ -15,3 +21,15 @@
         clip-path: inset(0 0 0 0);
     }
 }
+
+@media (max-width: 486px) {
+    p.tecName{
+        display: none;
+    }
+    .tecElement{
+        width: min-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }

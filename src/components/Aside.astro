@@ -3,7 +3,7 @@ import ButtonCloseAside from "./ButtonCloseAside.astro";
 ---
 
 <aside
-  class="fixed h-screen w-2/5 left-0 top-0 z-30 text-white p-7"
+  class="fixed h-screen left-0 top-0 z-30 text-white p-7"
   style={{ borderRight: "1px solid white" }}
 >
   <ButtonCloseAside />
@@ -23,13 +23,18 @@ import ButtonCloseAside from "./ButtonCloseAside.astro";
     class="btn-downloadcv bg-transparent mt-6 px-4 py-2 rounded-full"
     style={{ border: "1px solid white" }}
   >
-    Download CV
+    <a href="src/util/CV.pdf" download="CV.pdf"> Download CV </a>
   </button>
   <button
     class="btn-checklinkdin bg-transparent mt-6 px-4 py-2 rounded-full"
     style={{ border: "1px solid white" }}
   >
-    Check LinkedIn
+    <a
+      href="https://www.linkedin.com/in/lautaro-fernandez-4205aa243"
+      target="_blank"
+    >
+      Check LinkedIn
+    </a>
   </button>
 </aside>
 
@@ -45,6 +50,7 @@ import ButtonCloseAside from "./ButtonCloseAside.astro";
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    width: 40%;
   }
 
   .btn-downloadcv,
@@ -95,6 +101,16 @@ import ButtonCloseAside from "./ButtonCloseAside.astro";
     }
     100% {
       transform: translateX(0px);
+    }
+  }
+  @media (max-width: 650px) {
+    aside {
+      width: 75%;
+    }
+  }
+  @media (max-width: 345px) {
+    aside {
+      width: 100%;
     }
   }
 </style>

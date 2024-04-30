@@ -86,11 +86,9 @@ export default function HabilitiesItems() {
         {AllIcons.map((item, index) => (
           <div
             key={index}
-            className="relative rounded-md h-14 w-40 items-center p-2 gap-2"
+            className="relative rounded-md h-14 items-center p-2 gap-2 tecElement"
             style={{
-              border: "1px solid white",
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
+              border: "1px solid white"
             }}
           >
             <div
@@ -109,7 +107,7 @@ export default function HabilitiesItems() {
               {item.svg}
             </div>
             <p
-              className="h-full w-full flex items-center z-10"
+              className="h-full w-full flex items-center z-10 tecName"
               style={{ gridColumn: "2/5" }}
             >
               {item.name}
