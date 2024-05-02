@@ -1,0 +1,54 @@
+---
+interface Props {
+  projectId: number;
+  img: string;
+  name: string;
+  stack: string[];
+}
+
+import StackItem from "./StackItem.astro";
+
+const { img, name, stack, projectId } = Astro.props;
+---
+
+<div
+  class="projectCard flex flex-col relative"
+  id={`${projectId}`}
+  transition:name={`project ${projectId} card`}
+>
+  <a href={`/projects/${projectId}`} class="absolute w-full h-full"></a>
+  <div class="imgContainer">
+    <img src={img} alt={`${name}_image`} />
+  </div>
+  <div class="overflow-y-auto p-3 flex flex-col gap-3">
+    <div class="text-white text-lg">
+      <h4>{name}</h4>
+    </div>
+    <div class="containerStack flex flex-wrap gap-2">
+      {stack.map((t) => <StackItem text={t} />)}
+    </div>
+  </div>
+</div>
+
+<style>
+  .projectCard {
+    width: 25rem;
+    height: 28rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+  }
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    background-color: rgb(15, 15, 15);
+    border-radius: 1rem 1rem 0 0;
+    padding: 0.5rem;
+  }
+  .imgContainer img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+</style>

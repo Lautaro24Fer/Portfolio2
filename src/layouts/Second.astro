@@ -1,0 +1,21 @@
+---
+import Layout from "./Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Aside from "../components/Aside.astro";
+import ButtonOpenAside from "../components/ButtonOpenAside.jsx";
+---
+
+<Layout title="LF | Projects">
+  <main class="h-screen w-full p-8 text-white" transition:name="mainContainer">
+    <div
+      class="h-full w-full rounded-md shadow-md shadow-slate-600 p-6"
+      style={{ border: "1px solid white" }}
+    >
+      <header class="flex justify-between items-center">
+        <h1 class="text-3xl">My projects</h1>
+        <a href="/" class="text-blue-600 text-lg">Go back to main section</a>
+      </header>
+      <slot />
+    </div>
+  </main>
+</Layout>

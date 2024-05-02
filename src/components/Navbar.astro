@@ -1,5 +1,5 @@
 ---
-import NavbarReact from "./Navbar.jsx";
+import NavbarReact from "./NavbarReact.jsx";
 import {
   CapivaraIcon,
   PhantomIcon,
@@ -7,60 +7,13 @@ import {
   FolderIcon,
 } from "../util/icons.jsx";
 ---
-
-<script>
-  document.querySelectorAll("li").forEach((item) => {
-    item.addEventListener("click", (e) => {
-      if (item.id) {
-        const section = document.querySelector(`#section_${item.id}`);
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
-</script>
-
 <div class="fixed h-24 flex justify-center w-full z-20">
   <nav class="w-full h-full flex px-10 justify-between shadow shadow-slate-200">
     <div class="flex items-center text-3xl capivaraIconContainer">
       <CapivaraIcon />
     </div>
     <ul class="h-full w-2/5 flex items-center justify-around text-white py-5">
-      <!-- <NavbarReact arraySectionsId={arraySectionsId} handleView={handleViewSections}/> -->
-      <li class="relative h-max aside-element navbarElement" id="knowme">
-        <div>
-          <PhantomIcon />
-        </div>
-        <div
-          class="absolute bg-slate-900 rounded text-white w-max px-2 py-1 hoverBoard"
-        >
-          <p>Know Me!</p>
-        </div>
-      </li>
-      <li class="relative h-max aside-element navbarElement" id="habilities">
-        <button class="bg-transparent h-full w-full">
-          <div>
-            <GraduateHatIcon />
-          </div>
-          <div
-            class="absolute bg-slate-900 rounded text-white w-max px-2 py-1 hoverBoard"
-          >
-            <p>My knowledge</p>
-          </div>
-        </button>
-      </li>
-      <li class="relative h-max aside-element navbarElement">
-        <a href="/projects" class="absolute h-full w-full bg-transparent"></a>
-        <button class="bg-transparent h-full w-full">
-          <div>
-            <FolderIcon />
-          </div>
-          <div
-            class="absolute bg-slate-900 rounded text-white w-max px-2 py-1 hoverBoard"
-          >
-            <p>My projects</p>
-          </div>
-        </button>
-      </li>
+      <NavbarReact client:load/>
     </ul>
   </nav>
 </div>
@@ -111,7 +64,7 @@ import {
     .capivaraIconContainer {
       display: none;
     }
-    nav ul{
+    nav ul {
       width: 100%;
       display: flex;
       justify-content: space-around;

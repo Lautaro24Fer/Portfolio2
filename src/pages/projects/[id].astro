@@ -1,0 +1,90 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { id: "1" } },
+    { params: { id: "2" } },
+    { params: { id: "3" } },
+    { params: { id: "4" } },
+    { params: { id: "5" } },
+    { params: { id: "6" } },
+  ];
+}
+
+const { id } = Astro.params;
+
+import Second from "../../layouts/Second.astro";
+import AllProjects from "../../util/AllProjects.json";
+
+const project = AllProjects.filter((p) => p.id === Number(id))[0];
+---
+
+<Second>
+  <section
+    class="h-4/5 w-4/5 absolute top-0 mt-12 rounded-lg p-5"
+    transition:name={`project ${id} card`}
+  >
+    <header class="flex justify-between items-center h-max w-full">
+      <h1 class="text-2xl">{project.name}</h1>
+      <a href="/projects" class="text-blue-600 font-bold">Go back</a>
+    </header>
+    <div class="mainContainer">
+      <div class="imageContainer"></div>
+      <div class="descContainer"></div>
+    </div>
+  </section>
+
+  <style>
+    section {
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-box-shadow: 0px 0px 500px 166px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 500px 166px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 500px 166px rgba(0, 0, 0, 0.75);
+      background-color: rgb(21, 21, 21);
+      transition: all 1s ease-in-out;
+      animation: showProjectBoardBouny 0.2s ease-in;
+    }
+
+    .mainContainer {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      height: 95%;
+      width: 100%;
+    }
+
+    .imageContainer {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      width: 100%;
+    }
+
+    .descContainer {
+      grid-column-start: 4;
+      grid-column-end: 8;
+      width: 100%;
+    }
+
+    @keyframes showProjectBoardBouny {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      25% {
+        transform: translateX(-85%);
+        opacity: 0.2;
+      }
+      50% {
+        transform: translateX(-65%);
+        opacity: 0.5;
+      }
+      75% {
+        transform: translateX(-85%);
+        opacity: 0.8;
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</Second>

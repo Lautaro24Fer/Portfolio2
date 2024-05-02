@@ -1,7 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import Navbar from "../components/Navbar.astro";
-import ButtonOpenAside from "../components/ButtonOpenAside.astro";
+import ButtonOpenAside from "../components/ButtonOpenAside.jsx";
 import Aside from "../components/Aside.astro";
 import { DownrowIcon } from "../util/icons.jsx";
 import CommentBox from "../components/CommentBox.astro";
@@ -10,7 +10,7 @@ import CommentBox from "../components/CommentBox.astro";
 <Layout title="LF | Portfolio">
   <Navbar />
   <header
-    class="w-full h-screen flex flex-col justify-center items-center text-white gap-7 relative"
+    class="w-full flex flex-col justify-center items-center text-white gap-7 relative"
   >
     <h1 class="text-6xl text-center">Welcome to my portfolio!</h1>
     <p class="text-3xl">Scroll for see more</p>
@@ -31,19 +31,40 @@ import CommentBox from "../components/CommentBox.astro";
       />
     </div>
   </header>
-  <main class="rounded-2xl p-10 mt-24 h-max flex flex-col gap-10">
+  <main
+    class="rounded-2xl p-10 mt-24 h-max flex flex-col gap-10"
+    transition:name="mainContainer"
+  >
     <slot />
   </main>
   <Aside />
-  <ButtonOpenAside />
+  <ButtonOpenAside client:load/>
   <style>
     main {
       width: 55%;
       background-color: rgba(75, 75, 75, 0.063);
       border: 1px solid rgb(190, 190, 190);
+      margin: 0 0 3rem 0;
     }
     .downRowIcon {
       animation: infinite bungle 1s 2s;
+    }
+
+    header{
+      height: 90vh;
+    }
+
+    header > h1, p{
+      animation: opacity 1s ease-in;
+    }
+
+    @keyframes opacity {
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
     }
 
     @keyframes bungle {
@@ -75,8 +96,8 @@ import CommentBox from "../components/CommentBox.astro";
       header p {
         font-size: 1.25rem;
       }
-      header .containerCommentBox{
-        margin: 0 0 4rem 2rem
+      header .containerCommentBox {
+        margin: 0 0 4rem 2rem;
       }
     }
   </style>

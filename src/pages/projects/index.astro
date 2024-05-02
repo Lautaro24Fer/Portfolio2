@@ -1,0 +1,20 @@
+---
+import Second from "../../layouts/Second.astro";
+import AllProyectsCard from "../../components/react/AllProyectsCard.jsx";
+---
+
+<Second>
+  <div class="overflow-y-auto h-4/5 containerAllProjects">
+    <AllProyectsCard client:only />
+  </div>
+</Second>
+
+<style>
+  .containerAllProjects {
+    padding: 3rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+</style>

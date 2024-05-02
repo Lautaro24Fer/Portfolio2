@@ -1,12 +1,12 @@
 ---
-import ButtonCloseAside from "./ButtonCloseAside.astro";
+import ButtonCloseAside from "./ButtonCloseAside.jsx";
 ---
 
 <aside
   class="fixed h-screen left-0 top-0 z-30 text-white p-7"
   style={{ borderRight: "1px solid white" }}
 >
-  <ButtonCloseAside />
+  <ButtonCloseAside client:load />
   <h2 class="font-bold text-3xl">Lautaro Leonel Fernández</h2>
   <hr class="mt-3 mb-5 w-3/5" />
   <ul class="font-light flex flex-col w-full gap-5 text-2xl">
