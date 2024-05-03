@@ -3,13 +3,13 @@
 		"id": 1,
 		"imgPath": "/x-miniatura-compr.png",
 		"name": "Proyecto de prueba 1",
-		"productionUrl": "",
-		"ghRepo": "",
+		"description": "UI elements for pricing cards of a streaming platform",
+		"devCount": 1,
+		"productionUrl": "https://my-x.vercel.app/",
+		"ghRepo": "https://github.com/Lautaro24Fer/Laboratorio3-Project2",
 		"tecStack": [
 			"HTML",
-			"CSS",
-			"React",
-			"Express"
+			"CSS"
 		]
 	},
 	{

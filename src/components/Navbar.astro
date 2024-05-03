@@ -1,19 +1,15 @@
 ---
 import NavbarReact from "./NavbarReact.jsx";
-import {
-  CapivaraIcon,
-  PhantomIcon,
-  GraduateHatIcon,
-  FolderIcon,
-} from "../util/icons.jsx";
+import { CapivaraIcon } from "../util/icons.jsx";
 ---
+
 <div class="fixed h-24 flex justify-center w-full z-20">
   <nav class="w-full h-full flex px-10 justify-between shadow shadow-slate-200">
     <div class="flex items-center text-3xl capivaraIconContainer">
       <CapivaraIcon />
     </div>
-    <ul class="h-full w-2/5 flex items-center justify-around text-white py-5">
-      <NavbarReact client:load/>
+    <ul class="h-full w-3/5 flex items-center justify-around text-white py-5">
+      <NavbarReact client:load />
     </ul>
   </nav>
 </div>

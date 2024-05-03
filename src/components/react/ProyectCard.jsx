@@ -6,12 +6,7 @@ export default function ProyectCard({ img, name, stack, id }) {
     <>
       <div
         className="flex flex-col rounded-lg gap-2 proyectCardReact"
-        style={{
-          height: "28rem",
-          width: "25rem",
-          border: "1px solid white",
-          viewTransitionName: `project ${id} card`,
-        }}
+        style={{ viewTransitionName: `project ${id} card` }}
       >
         <div
           className="imgContainer rounded-lg h-4/5 p-3 relative flex justify-center items-center"
@@ -24,7 +19,7 @@ export default function ProyectCard({ img, name, stack, id }) {
             className="h-full object-contain"
           />
         </div>
-        <div className="descriptionContainer w-full px-3 flex flex-col gap-3">
+        <div className="descriptionContainer w-full px-3 flex flex-col gap-3 overflow-y-auto">
           <h4 className="text-lg">{name}</h4>
           <div className="flex gap-2 flex-wrap">
             {stack.map((s) => (

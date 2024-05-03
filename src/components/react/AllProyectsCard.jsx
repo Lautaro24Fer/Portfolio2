@@ -7,6 +7,7 @@ export default function AllProyectsCard() {
     <>
       {AllProjects.map((p) => (
         <ProyectCard
+          key={p.id}
           img={p.imgPath}
           name={p.name}
           stack={p.tecStack}

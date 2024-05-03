@@ -11,11 +11,11 @@ export default function ButtonCloseAside() {
 
   return (
     <button
-      class="w-16 h-16 bg-transparent absolute top-0 right-0 m-5 rounded-full grid items-center text-2xl text-white"
+      className="w-16 h-16 bg-transparent absolute top-0 right-0 m-2 rounded-full grid items-center text-2xl text-white"
       id="button-close-aside-id"
       onClick={handleClick}
     >
-      <span class="text-center">❌</span>
+      <span className="text-center">❌</span>
     </button>
   );
 }

@@ -1,5 +1,5 @@
 ---
-import { GithubIcon } from "../util/icons.jsx";
+import { GithubIcon, FolderIcon } from "../util/icons.jsx";
 ---
 
 <swiper-container class="mySwiper relative overflow-hidden" navigation="true">
@@ -11,7 +11,7 @@ import { GithubIcon } from "../util/icons.jsx";
       <div
         class="absolute h-full w-full p-5 text-white text-left text-md overflow-y-auto rounded-md hoverDescription"
       >
-        <p>Este es mi primer texto de prueba</p>
+        <p>UI elements for pricing cards of a streaming platform</p>
       </div>
       <img
         src="/x-miniatura-compr.png"
@@ -19,61 +19,30 @@ import { GithubIcon } from "../util/icons.jsx";
         class="h-full lastProyectImg"
       />
     </div>
-    <button
-      class="h-max rounded-full absolute bottom-0 m-3 right-0 text-white bg-slate-700 text-md p-2 hover:scale-90 transition-all hover:shadow-medium hover:shadow-slate-800"
-    >
-      <a href="#" class="h-full w-full grid items-center">
-        <GithubIcon />
-      </a>
-    </button>
-  </swiper-slide>
-  <swiper-slide>
-    <div
-      class="flex justify-center items-center rounded-lg p-5 h-full w-max shadow-md shadow-slate-800 bgLastProyectImgContainer relative"
-      style={{ backgroundColor: "rgb(16, 16, 16)" }}
-    >
-      <div
-        class="absolute h-full w-full p-5 text-white text-left text-md overflow-y-auto rounded-md hoverDescription"
+    <div class="flex gap-3 absolute bottom-0 m-3 right-0">
+      <button
+        class="h-max rounded-full text-white bg-slate-700 text-md p-2 hover:scale-90 transition-all hover:shadow-medium hover:shadow-slate-800"
       >
-        <p>Este es mi primer texto de prueba</p>
-      </div>
-      <img
-        src="/x-miniatura-compr.png"
-        alt="last project released"
-        class="h-full lastProyectImg"
-      />
-    </div>
-    <button
-      class="h-max rounded-full absolute bottom-0 m-3 right-0 text-white bg-slate-700 text-md p-2 hover:scale-90 transition-all hover:shadow-medium hover:shadow-slate-800"
-    >
-      <a href="#" class="h-full w-full grid items-center">
-        <GithubIcon />
-      </a>
-    </button>
-  </swiper-slide>
-  <swiper-slide>
-    <div
-      class="flex justify-center items-center rounded-lg p-5 h-full w-max shadow-md shadow-slate-800 bgLastProyectImgContainer relative"
-      style={{ backgroundColor: "rgb(16, 16, 16)" }}
-    >
-      <div
-        class="absolute h-full w-full p-5 text-white text-left text-md overflow-y-auto rounded-md hoverDescription"
+        <a
+          href="https://my-x.vercel.app/"
+          class="h-full w-full grid items-center"
+          target="_blank"
+        >
+          <FolderIcon />
+        </a>
+      </button>
+      <button
+        class="h-max rounded-full text-white bg-slate-700 text-md p-2 hover:scale-90 transition-all hover:shadow-medium hover:shadow-slate-800"
       >
-        <p>Este es mi primer texto de prueba</p>
-      </div>
-      <img
-        src="/x-miniatura-compr.png"
-        alt="last project released"
-        class="h-full lastProyectImg"
-      />
+        <a
+          href="https://github.com/Lautaro24Fer/Laboratorio3-Project2"
+          class="h-full w-full grid items-center"
+          target="_blank"
+        >
+          <GithubIcon />
+        </a>
+      </button>
     </div>
-    <button
-      class="h-max rounded-full absolute bottom-0 m-3 right-0 text-white bg-slate-700 text-md p-2 hover:scale-90 transition-all hover:shadow-medium hover:shadow-slate-800"
-    >
-      <a href="#" class="h-full w-full grid items-center">
-        <GithubIcon />
-      </a>
-    </button>
   </swiper-slide>
 </swiper-container>
 

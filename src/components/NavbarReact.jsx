@@ -9,7 +9,7 @@ export default function NavbarReact({}) {
       text: "Know Me!",
       path: "/",
       section: "knowme",
-      title: "KnowMe!",
+      title: "Know Me!",
       id: "knowme",
     },
     {
