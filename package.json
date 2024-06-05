@@ -17,6 +17,7 @@
     "@types/react-dom": "^18.2.25",
     "astro": "^4.6.3",
     "astro-icon": "^1.1.0",
+    "firebase": "^10.12.2",
     "framer-motion": "^11.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

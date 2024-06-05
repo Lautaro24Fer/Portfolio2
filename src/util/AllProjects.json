@@ -1,8 +1,8 @@
 [
 	{
 		"id": 1,
-		"imgPath": "/x-miniatura-compr.png",
-		"name": "Proyecto de prueba 1",
+		"imgPath": "https://firebasestorage.googleapis.com/v0/b/portfolio-images-311f4.appspot.com/o/portfolio%2Fimages%2Fx-miniatura-compr.png?alt=media&token=0e02b18b-8734-4ca7-8571-288fce69c37b",
+		"name": "Pricing UI",
 		"description": "UI elements for pricing cards of a streaming platform",
 		"devCount": 1,
 		"productionUrl": "https://my-x.vercel.app/",
@@ -14,67 +14,15 @@
 	},
 	{
 		"id": 2,
-		"imgPath": "/x-miniatura-compr.png",
-		"name": "Proyecto de prueba 1",
-		"productionUrl": "",
-		"ghRepo": "",
+		"imgPath": "https://firebasestorage.googleapis.com/v0/b/portfolio-images-311f4.appspot.com/o/portfolio%2Fimages%2Fwallet-image-min.png?alt=media&token=7fa8f9ec-da64-4dda-83b6-0d21db06867d",
+		"name": "Wallet UI Plataform",
+		"description": "All wallet UI plataform ",
+		"devCount": 1,
+		"productionUrl": "https://lautaro24fer.github.io/Laboratorio3-Project1",
+		"ghRepo": "https://github.com/Lautaro24Fer/Laboratorio3-Project1",
 		"tecStack": [
 			"HTML",
-			"CSS",
-			"React",
-			"Express"
-		]
-	},
-	{
-		"id": 3,
-		"imgPath": "/x-miniatura-compr.png",
-		"name": "Proyecto de prueba 1",
-		"productionUrl": "",
-		"ghRepo": "",
-		"tecStack": [
-			"HTML",
-			"CSS",
-			"React",
-			"Express"
-		]
-	},
-	{
-		"id": 4,
-		"imgPath": "/x-miniatura-compr.png",
-		"name": "Proyecto de prueba 1",
-		"productionUrl": "",
-		"ghRepo": "",
-		"tecStack": [
-			"HTML",
-			"CSS",
-			"React",
-			"Express"
-		]
-	},
-	{
-		"id": 5,
-		"imgPath": "/x-miniatura-compr.png",
-		"name": "Proyecto de prueba 1",
-		"productionUrl": "",
-		"ghRepo": "",
-		"tecStack": [
-			"HTML",
-			"CSS",
-			"React",
-			"Express"
-		]
-	},
-	{
-		"id": 6,
-		"imgPath": "/x-miniatura-compr.png",
-		"name": "Proyecto de prueba 1",
-		"productionUrl": "",
-		"ghRepo": "",
-		"tecStack": [
-			"HTML",
-			"CSS",
-			"React",
-			"Express"
+			"CSS"
 		]
 	}
 ]

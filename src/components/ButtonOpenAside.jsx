@@ -13,7 +13,7 @@ export default function ButtonOpenAside() {
       id="button-open-aside-id"
       onClick={handleClick}
     >
-      <span className="text-center">🦍</span>
+      <span className="text-center">🖐🏻</span>
     </button>
   );
 }
